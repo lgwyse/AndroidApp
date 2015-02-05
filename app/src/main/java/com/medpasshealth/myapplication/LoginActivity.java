@@ -60,7 +60,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Intent intent = getIntent();
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -87,7 +86,13 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         });
 
         mLoginFormView = findViewById(R.id.login_form);
-        /*mProgressView = findViewById(R.id.login_progress)*/;
+        /*mProgressView = findViewById(R.id.login_progress);*/
+        findViewById(R.id.email_sign_in_button).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginActivity.this.startActivity(new Intent(LoginActivity.this, LifeActivity.class));
+            }
+        });
     }
 
     private void populateAutoComplete() {

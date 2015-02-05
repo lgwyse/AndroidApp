@@ -14,6 +14,12 @@ public class LifeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_life);
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LifeActivity.this.startActivity(new Intent(LifeActivity.this, LoginActivity.class));
+            }
+        });
     }
 
 
@@ -38,9 +44,5 @@ public class LifeActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-    
-    public void TestButton(View view) {
-        Intent myIntent = new Intent(LifeActivity.this, LoginActivity.class);
-        LifeActivity.this.startActivity(myIntent);
-    }
+
 }
