@@ -1,9 +1,11 @@
 package com.medpasshealth.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class LifeActivity extends Activity {
@@ -35,5 +37,10 @@ public class LifeActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    
+    public void TestButton(View view) {
+        Intent myIntent = new Intent(LifeActivity.this, LoginActivity.class);
+        LifeActivity.this.startActivity(myIntent);
     }
 }

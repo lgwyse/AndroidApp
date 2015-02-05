@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <color name="medpassblue">#1A6EA6</color>
+    <color name="medpassgreen">#54BD00</color>
+    
+</resources>
