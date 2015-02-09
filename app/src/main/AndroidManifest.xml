@@ -26,6 +26,18 @@
             android:label="  "
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.medpasshealth.myapplication.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".CreatePassword"
+            android:label="@string/title_activity_create_password" >
+        </activity>
     </application>
 
 </manifest>
