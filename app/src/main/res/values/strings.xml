@@ -5,7 +5,15 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_register">Register</string>
+    <string name="register">Register</string>
+    <string name="register_email">University Email Address</string>
+    <string name="register_agree">I accept this agreement</string>
+    <string name="license_policies">License and Policies</string>
     <string name="title_activity_create_password">CreatePassword</string>
+    <string name="contact_footer">844-MEDPASS or help@medpasshealth.com</string>
+    <string name="title_activity_account_verify">AccountVerify</string>
+    <string name="title_activity_emergency_contact">EmergencyContact</string>
+    <string name="title_activity_contact_info">ContactInfo</string>
+    <string name="title_activity_med_history">MedHistory</string>
 
 </resources>

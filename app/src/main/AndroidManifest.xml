@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +29,7 @@
         </activity>
         <activity
             android:name=".Register"
-            android:label="@string/title_activity_register"
+            android:label="@string/register"
             android:parentActivityName=".LoginActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -37,6 +38,22 @@
         <activity
             android:name=".CreatePassword"
             android:label="@string/title_activity_create_password" >
+        </activity>
+        <activity
+            android:name=".AccountVerify"
+            android:label="@string/title_activity_account_verify" >
+        </activity>
+        <activity
+            android:name=".EmergencyContact"
+            android:label="@string/title_activity_emergency_contact" >
+        </activity>
+        <activity
+            android:name=".ContactInfo"
+            android:label="@string/title_activity_contact_info" >
+        </activity>
+        <activity
+            android:name=".MedHistory"
+            android:label="@string/title_activity_med_history" >
         </activity>
     </application>
 

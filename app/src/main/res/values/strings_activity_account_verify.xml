@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="verifyParaOne"><b>Securing your personal data is very important to Med+Pass</b></string>
+    <string name="Account">Account</string>
+    <string name="verifyParaTwo">Your password <b>must</b> contain the following characteristics:</string>
+    <string name="numOne">1. 8 or more characters</string>
+    <string name="numTwo">2. At least 1 upper case letter (A-Z)</string>
+    <string name="numThree">3. At least 1 lower case letter (a-z)</string>
+    <string name="numFour">4. At least 1 number (0-9)</string>
+    <string name="numFive">5. At least 1 special character (~!@#%^*?=\-+_)</string>
+    <string name="numSix">6. No common passwords</string>
+</resources>

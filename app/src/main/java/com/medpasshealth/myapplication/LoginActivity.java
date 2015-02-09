@@ -84,6 +84,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 attemptLogin();
             }
         });
+        
 
         mLoginFormView = findViewById(R.id.login_form);
         /*mProgressView = findViewById(R.id.login_progress);*/
@@ -93,6 +94,13 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 LoginActivity.this.startActivity(new Intent(LoginActivity.this, LifeActivity.class));
             }
         });
+        findViewById(R.id.textView6).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginActivity.this.startActivity(new Intent(LoginActivity.this, Register.class));
+            }
+        });
+
     }
 
     private void populateAutoComplete() {
