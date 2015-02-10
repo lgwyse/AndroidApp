@@ -6,19 +6,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class AccountVerify extends Activity {
+public class VerifyIdentity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account_verify);
+        setContentView(R.layout.activity_verify_identity);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_account_verify, menu);
+        getMenuInflater().inflate(R.menu.menu_verify_identity, menu);
         return true;
     }
 

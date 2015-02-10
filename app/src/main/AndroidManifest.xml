@@ -40,8 +40,8 @@
             android:label="@string/title_activity_create_password" >
         </activity>
         <activity
-            android:name=".AccountVerify"
-            android:label="@string/title_activity_account_verify" >
+            android:name=".AccountManage"
+            android:label="@string/title_activity_account_manage" >
         </activity>
         <activity
             android:name=".EmergencyContact"
@@ -54,6 +54,10 @@
         <activity
             android:name=".MedHistory"
             android:label="@string/title_activity_med_history" >
+        </activity>
+        <activity
+            android:name=".VerifyIdentity"
+            android:label="@string/title_activity_verify_identity" >
         </activity>
     </application>
 

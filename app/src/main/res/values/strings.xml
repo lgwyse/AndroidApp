@@ -11,9 +11,10 @@
     <string name="license_policies">License and Policies</string>
     <string name="title_activity_create_password">CreatePassword</string>
     <string name="contact_footer">844-MEDPASS or help@medpasshealth.com</string>
-    <string name="title_activity_account_verify">AccountVerify</string>
+    <string name="title_activity_account_manage">Account</string>
     <string name="title_activity_emergency_contact">EmergencyContact</string>
     <string name="title_activity_contact_info">ContactInfo</string>
     <string name="title_activity_med_history">MedHistory</string>
+    <string name="title_activity_verify_identity">VerifyIdentity</string>
 
 </resources>
