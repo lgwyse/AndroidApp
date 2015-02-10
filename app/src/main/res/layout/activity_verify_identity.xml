@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Request a new code"
+        android:text="Request a new security code"
         android:id="@+id/textView34"
         android:layout_below="@+id/button7"
         android:layout_alignParentLeft="true"

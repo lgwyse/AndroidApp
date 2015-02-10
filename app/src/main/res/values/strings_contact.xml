@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="contact_personal">Personal Contact Information</string>
+    <string name="contact_emergency">Emergency Contact Information</string>
+    <string name="fname">First Name</string>
+    <string name="mname">Middle Name</string>
+    <string name="lname">Last Name</string>
+    <string name="dob">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="uscit">Are you a US citizen?</string>
+    <string name="address">Address</string>
+    <string name="aptnum">Suite / Apt #</string>
+    
+    
+</resources>
