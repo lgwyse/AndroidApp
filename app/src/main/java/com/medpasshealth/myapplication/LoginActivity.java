@@ -100,7 +100,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 LoginActivity.this.startActivity(new Intent(LoginActivity.this, Register.class));
             }
         });
-
     }
 
     private void populateAutoComplete() {

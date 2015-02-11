@@ -17,5 +17,5 @@
     <string name="title_activity_med_history">MedHistory</string>
     <string name="title_activity_verify_identity">VerifyIdentity</string>
     <string name="title_activity_recover_password">RecoverPassword</string>
-
+    <string name="title_activity_supertest">supertest</string>
 </resources>
