@@ -45,4 +45,7 @@ public class LifeActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    
+    
+    
 }

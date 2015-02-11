@@ -44,7 +44,7 @@
             android:label="@string/title_activity_account_manage" >
         </activity>
         <activity
-            android:name=".EmergencyContact"
+            android:name=".PersonalContact"
             android:label="@string/title_activity_emergency_contact" >
         </activity>
         <activity
@@ -58,6 +58,10 @@
         <activity
             android:name=".VerifyIdentity"
             android:label="@string/title_activity_verify_identity" >
+        </activity>
+        <activity
+            android:name=".RecoverPassword"
+            android:label="@string/title_activity_recover_password" >
         </activity>
     </application>
 

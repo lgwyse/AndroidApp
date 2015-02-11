@@ -39,9 +39,18 @@ public class Register extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public boolean onCheckboxClicked(View view) {
+    public void onCheckboxClicked(View view) {
         // Is the view now checked?
+        int gun = 1;
         boolean checked = ((CheckBox) view).isChecked();
-        return true;
+
+        switch(view.getId()) {
+            case R.id.checkbox_agree:
+                if (checked)
+                    gun++;
+                else
+                    gun--;
+                break;
+        }
     }
 }

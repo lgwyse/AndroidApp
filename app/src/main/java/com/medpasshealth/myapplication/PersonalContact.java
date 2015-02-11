@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class EmergencyContact extends Activity {
+public class PersonalContact extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

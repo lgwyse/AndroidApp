@@ -3,5 +3,11 @@
     <string name="paraOne">Thank you for completing your submission!</string>
     <string name="paraTwo">Med+Pass will notify you via email when your institution approves your submission. You may also check back here any time for your status.</string>
     <string name="complete">Complete</string>
+    <string name="account">Account</string>
+    <string name="profile">Profile</string>
+    <string name="medical">Medical</string>
+    <string name="insurance">Insurance</string>
+    <string name="immunizations">Immunizations</string>
+
 
 </resources>
