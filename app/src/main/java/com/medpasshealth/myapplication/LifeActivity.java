@@ -19,7 +19,7 @@ public class LifeActivity extends Activity {
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-    
+    int lastExpandedPosition = -1;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class LifeActivity extends Activity {
         prepareListData();
 
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
@@ -61,26 +62,27 @@ public class LifeActivity extends Activity {
 
             @Override
             public void onGroupExpand(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
-                        listDataHeader.get(groupPosition) + " Expanded",
-                        Toast.LENGTH_SHORT).show();
+                if (lastExpandedPosition != -1
+                        && groupPosition != lastExpandedPosition) {
+                    expListView.collapseGroup(lastExpandedPosition);
+                }
+                lastExpandedPosition = groupPosition;
             }
         });
 
-        // Listview Group collasped listener
+/*        // Listview Group collasped listener
         expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
 
             @Override
             public void onGroupCollapse(int groupPosition) {
                 Toast.makeText(getApplicationContext(),
-                        listDataHeader.get(groupPosition) + " Collapsed",
+                        listDataHeader.get(groupPosition) + " Collapsed", //TODO
                         Toast.LENGTH_SHORT).show();
-
             }
-        });
+        });*/
 
-        // Listview on child click listener
-        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+        // Listview on child click listener //TODO
+/*        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
@@ -96,24 +98,21 @@ public class LifeActivity extends Activity {
                         .show();
                 return false;
             }
-        });
+        });*/
     }
 
-    /*
-     * Preparing the list data
-     */
     private void prepareListData() {
-        listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
+        listDataHeader = new ArrayList<>();
+        listDataChild = new HashMap<>();
 
-        // Adding child data
+        // Header data
         listDataHeader.add("Account");
         listDataHeader.add("Profile");
         listDataHeader.add("Medical");
         listDataHeader.add("Insurance");
         listDataHeader.add("Immunizations");
 
-        // Adding child data
+        // Child data
         List<String> account = new ArrayList<String>();
         account.add("Create Password");
 
@@ -143,7 +142,7 @@ public class LifeActivity extends Activity {
         immunizations.add("Immunizations Form Download");
         immunizations.add("Immunization Form - Upload");
         
-        listDataChild.put(listDataHeader.get(0), account); // Header, Child data
+        listDataChild.put(listDataHeader.get(0), account); // Header & Child data
         listDataChild.put(listDataHeader.get(1), profile);
         listDataChild.put(listDataHeader.get(2), medical);
         listDataChild.put(listDataHeader.get(3), insurance);
