@@ -5,7 +5,6 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
-import android.content.ContentResolver;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
@@ -34,7 +33,7 @@ import java.util.List;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
+public class AccountSignIn extends Activity implements LoaderCallbacks<Cursor> {
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -59,7 +58,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_account_signin);
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -91,13 +90,13 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         findViewById(R.id.email_sign_in_button).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginActivity.this.startActivity(new Intent(LoginActivity.this, LifeActivity.class));
+                AccountSignIn.this.startActivity(new Intent(AccountSignIn.this, LifeActivity.class));
             }
         });
         findViewById(R.id.textView6).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginActivity.this.startActivity(new Intent(LoginActivity.this, Register.class));
+                AccountSignIn.this.startActivity(new Intent(AccountSignIn.this, Register.class));
             }
         });
     }
@@ -225,7 +224,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-        List<String> emails = new ArrayList<String>();
+        List<String> emails = new ArrayList<>();
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             emails.add(cursor.getString(ProfileQuery.ADDRESS));
@@ -254,7 +253,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     private void addEmailsToAutoComplete(List<String> emailAddressCollection) {
         //Create adapter to tell the AutoCompleteTextView what to show in its dropdown list.
         ArrayAdapter<String> adapter =
-                new ArrayAdapter<String>(LoginActivity.this,
+                new ArrayAdapter<>(AccountSignIn.this,
                         android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
 
         mEmailView.setAdapter(adapter);

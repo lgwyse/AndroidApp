@@ -3,11 +3,8 @@ package com.medpasshealth.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,20 +25,15 @@ public class LifeActivity extends Activity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LifeActivity.this.startActivity(new Intent(LifeActivity.this, LoginActivity.class));
+                LifeActivity.this.startActivity(new Intent(LifeActivity.this, AccountSignIn.class));
             }
         });
 
-        // get the listview
+        // Main Menu Navigation/Expandable List View
         expListView = (ExpandableListView) findViewById(R.id.navexp);
-
-        // preparing list data
         prepareListData();
-
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
-
-
-        // setting list adapter
+        // set list adapter
         expListView.setAdapter(listAdapter);
 
         // Listview Group click listener
@@ -81,26 +73,63 @@ public class LifeActivity extends Activity {
             }
         });*/
 
-        // Listview on child click listener //TODO
-/*        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+        // Menu Activity Tree
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
-                // TODO Auto-generated method stub
-                Toast.makeText(
-                        getApplicationContext(),
-                        listDataHeader.get(groupPosition)
-                                + " : "
-                                + listDataChild.get(
-                                listDataHeader.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT)
-                        .show();
+                if (groupPosition == 0) { //Account
+                switch (childPosition) {
+                    case 0:
+                        LifeActivity.this.startActivity(new Intent(LifeActivity.this, CreatePassword.class));
+                        break;
+                }}
+                if (groupPosition == 1) { //Profile
+                    switch (childPosition) {
+                        case 0:
+                            LifeActivity.this.startActivity(new Intent(LifeActivity.this, ContactPersonal.class));
+                            break;
+                        case 1:
+                            LifeActivity.this.startActivity(new Intent(LifeActivity.this, ContactEmergency.class));
+                            break;
+                    }
+                }
+                if (groupPosition == 2) { //Medical
+                    switch (childPosition) {
+                        case 0:
+                            LifeActivity.this.startActivity(new Intent(LifeActivity.this, MedHistory.class));
+                            break;
+                        case 1:
+                            LifeActivity.this.startActivity(new Intent(LifeActivity.this, MedHistory.class));
+                            break;
+                    }
+                }
+                if (groupPosition == 3) { //Insurance
+                    switch (childPosition) {
+                        case 0:
+                            LifeActivity.this.startActivity(new Intent(LifeActivity.this, Register.class));
+                            break;
+                        case 1:
+                            LifeActivity.this.startActivity(new Intent(LifeActivity.this, RecoverPassword.class));
+                            break;
+                    }
+                }
+                if (groupPosition == 4) { //Immunization
+                    switch (childPosition) {
+                        case 0:
+                            LifeActivity.this.startActivity(new Intent(LifeActivity.this, AccountManage.class));
+                            break;
+                        case 1:
+                            LifeActivity.this.startActivity(new Intent(LifeActivity.this, AccountSignIn.class));
+                            break;
+                    }
+                }
                 return false;
             }
-        });*/
+        });
     }
-
+    //Menu Text
     private void prepareListData() {
         listDataHeader = new ArrayList<>();
         listDataChild = new HashMap<>();
@@ -113,20 +142,20 @@ public class LifeActivity extends Activity {
         listDataHeader.add("Immunizations");
 
         // Child data
-        List<String> account = new ArrayList<String>();
+        List<String> account = new ArrayList<>();
         account.add("Create Password");
 
-        List<String> profile = new ArrayList<String>();
+        List<String> profile = new ArrayList<>();
         profile.add("Personal Contact Information");
         profile.add("Emergency Contact Information");
         profile.add("Entering Semester");
 
-        List<String> medical = new ArrayList<String>();
+        List<String> medical = new ArrayList<>();
         medical.add("Medical ID - Personal Basics");
         medical.add("Medical History");
         medical.add("Medications");
 
-        List<String> insurance = new ArrayList<String>();
+        List<String> insurance = new ArrayList<>();
         insurance.add("Insurance Questionaire");
         insurance.add("Primary Insurance Policy");
         insurance.add("Primary Insurance Policy - Holder");
@@ -137,42 +166,16 @@ public class LifeActivity extends Activity {
         insurance.add("Insurance Cards - Image Upload");
         insurance.add("Self-Pay Billing");
 
-        List<String> immunizations = new ArrayList<String>();
+        List<String> immunizations = new ArrayList<>();
         immunizations.add("Tuberculosis Questionaire");
         immunizations.add("Immunizations Form Download");
         immunizations.add("Immunization Form - Upload");
         
-        listDataChild.put(listDataHeader.get(0), account); // Header & Child data
+        listDataChild.put(listDataHeader.get(0), account);
         listDataChild.put(listDataHeader.get(1), profile);
         listDataChild.put(listDataHeader.get(2), medical);
         listDataChild.put(listDataHeader.get(3), insurance);
         listDataChild.put(listDataHeader.get(4), immunizations);
     }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_life, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    
-    
     
 }
