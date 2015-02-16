@@ -45,7 +45,7 @@ public class Register extends Activity {
         boolean checked = ((CheckBox) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.checkbox_agree:
+            case R.id.agreecheckbox:
                 if (checked)
                     gun++;
                 else

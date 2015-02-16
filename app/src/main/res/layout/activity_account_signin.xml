@@ -19,8 +19,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/action_sign_in_short"
         android:textColor="@color/medpassblue"
-        android:id="@+id/textView2"
-        android:layout_gravity="left|center_horizontal"
+        android:id="@+id/header"
+        android:layout_gravity="start|center_horizontal"
         android:layout_marginBottom="20dp" />
 
     <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"

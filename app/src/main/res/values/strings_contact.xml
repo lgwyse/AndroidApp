@@ -10,6 +10,16 @@
     <string name="uscit">Are you a US citizen?</string>
     <string name="address">Address</string>
     <string name="aptnum">Suite / Apt #</string>
-    
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zip">Zip</string>
+    <string name="pref_phone">Preferred Phone</string>
+    <string name="backup_email">Backup Email</string>
+    <string name="relation">Relationship</string>
+    <string name="prim_phone">Primary Phone</string>
+    <string name="sec_phone">Secondary Phone</string>
+    <string name="period">Period</string>
+    <string name="class_sem">Class</string>
+    <string name="campus_res">Campus Resident?</string>
     
 </resources>

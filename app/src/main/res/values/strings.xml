@@ -20,5 +20,8 @@
     <string name="title_activity_supertest">supertest</string>
     <string name="title_activity_contact_personal">ContactPersonal</string>
     <string name="title_activity_contact_emergency">ContactEmergency</string>
+    <string name="submit">Submit</string>
+    <string name="confirm">Confirm</string>
+    <string name="contnu">Continue...</string>
 
 </resources>

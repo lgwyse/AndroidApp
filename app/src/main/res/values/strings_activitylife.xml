@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="paraOne">Thank you for completing your submission!</string>
-    <string name="paraTwo">Med+Pass will notify you via email when your institution approves your submission. You may also check back here any time for your status.</string>
+    <string name="paracomplete">Thank you for completing your submission!\nMed+Pass will notify you via email when your institution approves your submission. You may also check back here any time for your status.</string>
     <string name="complete">Complete</string>
     <string name="account">Account</string>
     <string name="profile">Profile</string>

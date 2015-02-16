@@ -12,7 +12,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/register"
         android:textColor="@color/medpassblue"
-        android:id="@+id/textView11"
+        android:id="@+id/header"
         android:layout_gravity="start|center_horizontal"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/register_email"
-        android:id="@+id/textView12"
-        android:layout_below="@+id/textView11"
+        android:id="@+id/emailtext"
+        android:layout_below="@+id/header"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="54dp" />
@@ -36,7 +36,7 @@
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:singleLine="true"
-        android:layout_below="@+id/textView12"
+        android:layout_below="@+id/emailtext"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -45,35 +45,25 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/register_agree"
-        android:id="@+id/textView13"
+        android:id="@+id/agreementtext"
         android:layout_below="@+id/autoCompleteTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="48dp" />
 
     <CheckBox 
-        android:id="@+id/checkbox_agree"
+        android:id="@+id/agreecheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/license_policies"
-        android:layout_below="@+id/textView13"
+        android:layout_below="@+id/agreementtext"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:onClick="onCheckboxClicked" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/medpassblue"
-        android:text="@string/contact_footer"
-        android:id="@+id/textView14"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
     <Button
         style="?android:textAppearanceSmall"
-        android:id="@+id/button9"
+        android:id="@+id/registerbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/register"
@@ -81,8 +71,18 @@
         android:background="@color/medpassgreen"
         android:clickable="true"
         android:textColor="#ffffffff"
-        android:layout_below="@+id/checkbox_agree"
+        android:layout_below="@+id/agreecheckbox"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/medpassblue"
+        android:text="@string/contact_footer"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
