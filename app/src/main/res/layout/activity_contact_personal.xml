@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/contact_personal"
-        android:id="@+id/header_PCI"
+        android:id="@+id/header"
         android:textColor="@color/medpassblue"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"

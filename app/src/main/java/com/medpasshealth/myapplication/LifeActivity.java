@@ -3,9 +3,11 @@ package com.medpasshealth.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-
+import android.widget.PopupMenu;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,12 +24,12 @@ public class LifeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_life);
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+/*        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() { //TODO
             @Override
             public void onClick(View v) {
                 LifeActivity.this.startActivity(new Intent(LifeActivity.this, AccountSignIn.class));
             }
-        });
+        });*/
 
         // Main Menu Navigation/Expandable List View
         expListView = (ExpandableListView) findViewById(R.id.navexp);
@@ -177,5 +179,23 @@ public class LifeActivity extends Activity {
         listDataChild.put(listDataHeader.get(3), insurance);
         listDataChild.put(listDataHeader.get(4), immunizations);
     }
-    
+
+    public void showPopup(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+        popup.inflate(R.menu.menu_life);
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener () {
+         
+             public boolean onMenuItemClick (MenuItem item){
+             switch (item.getItemId()) {
+                 case R.id.action_signin:
+                     LifeActivity.this.startActivity(new Intent(LifeActivity.this, AccountSignIn.class));
+                     break;
+                 default:
+                     break;
+             }
+             return true;
+             }
+        });
+        popup.show();
+    }
 }

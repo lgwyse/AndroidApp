@@ -17,11 +17,13 @@
     <string name="title_activity_med_history">MedHistory</string>
     <string name="title_activity_verify_identity">VerifyIdentity</string>
     <string name="title_activity_recover_password">RecoverPassword</string>
-    <string name="title_activity_supertest">supertest</string>
+    <string name="title_activity_signin">Sign In</string>
+    <string name="title_activity_life">Life</string>
     <string name="title_activity_contact_personal">ContactPersonal</string>
     <string name="title_activity_contact_emergency">ContactEmergency</string>
     <string name="submit">Submit</string>
     <string name="confirm">Confirm</string>
-    <string name="contnu">Continue...</string>
+    <string name="contnu">Continue…</string>
+    <string name="title_activity_terms_of_use">TermsOfUse</string>
 
 </resources>

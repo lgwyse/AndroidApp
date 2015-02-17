@@ -55,11 +55,21 @@
         android:id="@+id/agreecheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/license_policies"
         android:layout_below="@+id/agreementtext"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:onClick="onCheckboxClicked" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/license_policies"
+        android:id="@+id/agreecbtext"
+        android:layout_alignBottom="@+id/agreecheckbox"
+        android:layout_toRightOf="@+id/agreecheckbox"
+        android:layout_toEndOf="@+id/agreecheckbox"
+        android:layout_marginBottom="5dp" />
 
     <Button
         style="?android:textAppearanceSmall"
@@ -73,7 +83,8 @@
         android:textColor="#ffffffff"
         android:layout_below="@+id/agreecheckbox"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"

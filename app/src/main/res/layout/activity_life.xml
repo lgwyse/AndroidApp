@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/complete"
+        android:text="@string/title_activity_life"
         android:id="@+id/header"
         android:textColor="@color/medpassblue"
         android:layout_alignParentTop="true"
@@ -17,14 +17,17 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="25dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageButton
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
-        android:text="@string/paracomplete"
-        android:id="@+id/textView8"
-        android:layout_below="@+id/header"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:src="@drawable/medpass_logo_small"
+        android:contentDescription="The Menu"
+        android:onClick="showPopup"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/navexp"
+        android:id="@+id/medmenu" />
 
     <ExpandableListView
         android:layout_width="wrap_content"
@@ -33,16 +36,7 @@
         android:fastScrollEnabled="false"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/footer"
-        android:layout_below="@+id/textView8" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test Button"
-        android:id="@+id/button"
-        android:layout_above="@+id/textView8"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/header" />
 
     <TextView
         android:layout_width="wrap_content"

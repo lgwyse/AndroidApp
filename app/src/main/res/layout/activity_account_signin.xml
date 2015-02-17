@@ -8,27 +8,27 @@
     tools:context="com.medpasshealth.myapplication.AccountSignIn"
     android:weightSum="1">
 
-    <!-- Login progress -->
-    <ProgressBar android:id="@+id/textView" style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp" android:visibility="gone" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/action_sign_in_short"
-        android:textColor="@color/medpassblue"
-        android:id="@+id/header"
-        android:layout_gravity="start|center_horizontal"
-        android:layout_marginBottom="20dp" />
-
-    <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
-        android:layout_height="206dp"
+    <ScrollView android:id="@+id/login_form" android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:fillViewport="false">
 
         <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
             android:layout_height="wrap_content" android:orientation="vertical">
+    <!-- Login progress -->
+        <ProgressBar android:id="@+id/textView" style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/action_sign_in_short"
+                android:textColor="@color/medpassblue"
+                android:id="@+id/header"
+                android:layout_gravity="start|center_horizontal"
+                android:layout_marginBottom="20dp" />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -64,32 +64,27 @@
                 android:clickable="true"
                 android:textColor="#ffffffff" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/recover_password"
+                android:id="@+id/textView5"
+                android:linksClickable="true"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/reg_new_acc"
+                android:id="@+id/textView6"
+                android:linksClickable="true"
+                android:longClickable="false" />
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="322dp"
-        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Recover Password..."
-            android:id="@+id/textView5"
-            android:linksClickable="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Register New Account..."
-            android:id="@+id/textView6"
-            android:linksClickable="true"
-            android:longClickable="false" />
-
-    </LinearLayout>
 
 </LinearLayout>
 
