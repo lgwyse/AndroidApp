@@ -69,7 +69,8 @@
         android:layout_alignBottom="@+id/agreecheckbox"
         android:layout_toRightOf="@+id/agreecheckbox"
         android:layout_toEndOf="@+id/agreecheckbox"
-        android:layout_marginBottom="5dp" />
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/medpassgreen" />
 
     <Button
         style="?android:textAppearanceSmall"

@@ -16,7 +16,7 @@ public class Register extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        findViewById(R.id.agreementtext).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.agreecbtext).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Register.this.startActivity(new Intent(Register.this, TermsOfUse.class));

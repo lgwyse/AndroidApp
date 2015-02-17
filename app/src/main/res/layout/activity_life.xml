@@ -36,7 +36,10 @@
         android:fastScrollEnabled="false"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/footer"
-        android:layout_below="@+id/header" />
+        android:layout_below="@+id/header" 
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/medpassblue"
+        />
 
     <TextView
         android:layout_width="wrap_content"

@@ -8,17 +8,17 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class ContactPersonal extends Activity {
+public class EnteringSemester extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_personal);
+        setContentView(R.layout.activity_entering_semester);
 
         findViewById(R.id.contnu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ContactPersonal.this.startActivity(new Intent(ContactPersonal.this, ContactEmergency.class));
+                EnteringSemester.this.startActivity(new Intent(EnteringSemester.this, LifeActivity.class));
             }
         });
     }
@@ -27,7 +27,7 @@ public class ContactPersonal extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_contact_personal, menu);
+        getMenuInflater().inflate(R.menu.menu_entering_semester, menu);
         return true;
     }
 

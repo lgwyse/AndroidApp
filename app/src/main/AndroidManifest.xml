@@ -63,6 +63,10 @@
             android:name=".TermsOfUse"
             android:label="@string/title_activity_terms_of_use" >
         </activity>
+        <activity
+            android:name=".EnteringSemester"
+            android:label="@string/title_activity_entering_semester" >
+        </activity>
     </application>
 
 </manifest>

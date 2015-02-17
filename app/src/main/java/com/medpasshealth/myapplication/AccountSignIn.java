@@ -86,17 +86,23 @@ public class AccountSignIn extends Activity implements LoaderCallbacks<Cursor> {
         
 
         mLoginFormView = findViewById(R.id.login_form);
-        /*mProgressView = findViewById(R.id.login_progress);*/
+        mProgressView = findViewById(R.id.login_progress);
         findViewById(R.id.email_sign_in_button).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 AccountSignIn.this.startActivity(new Intent(AccountSignIn.this, LifeActivity.class));
             }
         });
-        findViewById(R.id.textView6).setOnClickListener(new OnClickListener() {
+        findViewById(R.id.regnewacc).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 AccountSignIn.this.startActivity(new Intent(AccountSignIn.this, Register.class));
+            }
+        });
+        findViewById(R.id.recoverpassword).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AccountSignIn.this.startActivity(new Intent(AccountSignIn.this, RecoverPassword.class));
             }
         });
     }

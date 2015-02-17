@@ -24,12 +24,6 @@ public class LifeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_life);
-/*        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() { //TODO
-            @Override
-            public void onClick(View v) {
-                LifeActivity.this.startActivity(new Intent(LifeActivity.this, AccountSignIn.class));
-            }
-        });*/
 
         // Main Menu Navigation/Expandable List View
         expListView = (ExpandableListView) findViewById(R.id.navexp);
@@ -81,6 +75,10 @@ public class LifeActivity extends Activity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
+                int index = parent.getFlatListPosition(ExpandableListView
+                        .getPackedPositionForChild(groupPosition, childPosition));
+                parent.setItemChecked(index, true);
+                
                 if (groupPosition == 0) { //Account
                 switch (childPosition) {
                     case 0:
@@ -95,6 +93,8 @@ public class LifeActivity extends Activity {
                         case 1:
                             LifeActivity.this.startActivity(new Intent(LifeActivity.this, ContactEmergency.class));
                             break;
+                        case 2:
+                            LifeActivity.this.startActivity(new Intent(LifeActivity.this, EnteringSemester.class));
                     }
                 }
                 if (groupPosition == 2) { //Medical
@@ -129,6 +129,7 @@ public class LifeActivity extends Activity {
                 }
                 return false;
             }
+            
         });
     }
     //Menu Text

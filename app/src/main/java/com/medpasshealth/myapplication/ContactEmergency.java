@@ -1,9 +1,11 @@
 package com.medpasshealth.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class ContactEmergency extends Activity {
@@ -12,6 +14,13 @@ public class ContactEmergency extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_emergency);
+
+        findViewById(R.id.contnu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ContactEmergency.this.startActivity(new Intent(ContactEmergency.this, EnteringSemester.class));
+            }
+        });
     }
 
 

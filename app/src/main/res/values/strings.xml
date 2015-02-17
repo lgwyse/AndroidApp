@@ -25,5 +25,6 @@
     <string name="confirm">Confirm</string>
     <string name="contnu">Continue…</string>
     <string name="title_activity_terms_of_use">TermsOfUse</string>
+    <string name="title_activity_entering_semester">EnteringSemester</string>
 
 </resources>
