@@ -1,15 +1,19 @@
 package com.medpasshealth.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.Switch;
+import android.widget.Toast;
 
 
 public class Register extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,20 +26,16 @@ public class Register extends Activity {
                 Register.this.startActivity(new Intent(Register.this, TermsOfUse.class));
             }
         });
+
+        findViewById(R.id.registerbutton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (((Switch) findViewById(R.id.agreementswitch)).isChecked()) {
+                    Register.this.startActivity(new Intent(Register.this, CreatePassword.class));
+                    }
+                }
+        });
     }
 
-    public void onCheckboxClicked(View view) {
-        // Is the view now checked?
-        int gun = 1;
-        boolean checked = ((CheckBox) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.agreecheckbox:
-                if (checked)
-                    gun++;
-                else
-                    gun--;
-                break;
-        }
-    }
 }

@@ -2,6 +2,7 @@
 <resources>
     <color name="medpassblue">#1A6EA6</color>
     <color name="medpassgreen">#54BD00</color>
+    <color name="medpassgreendark">#FF468700</color>
     <color name="menugreen">#DFF0D8</color>
     <color name="textgreen">#3C763C</color>
     <color name="textgray">#666666</color>

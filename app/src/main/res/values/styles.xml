@@ -5,10 +5,21 @@
         <item name="android:actionBarStyle">@style/Widget.Styled.ActionBar</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:buttonStyle">@style/button</item>
     </style>
 
     <style name="Widget.Styled.ActionBar" parent="android:style/Widget.Holo.Light.ActionBar.Solid">
         <item name="android:displayOptions">showHome|useLogo</item>
+    </style>
+    
+    <style name="button" parent="@android:style/Widget.Button">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
     </style>
 
 </resources>

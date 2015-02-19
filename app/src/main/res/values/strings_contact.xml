@@ -2,6 +2,7 @@
 <resources>
     <string name="contact_personal">Personal Contact Information</string>
     <string name="contact_emergency">Emergency Contact Information</string>
+    <string name="entering_semester">Entering Semester</string>
     <string name="fname">First Name</string>
     <string name="mname">Middle Name</string>
     <string name="lname">Last Name</string>
@@ -21,5 +22,105 @@
     <string name="period">Period</string>
     <string name="class_sem">Class</string>
     <string name="campus_res">Campus Resident?</string>
+    <string-array name="genders">
+        <item>Select</item>
+        <item>Female</item>
+        <item>Male</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="yesno_array">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="state_array">
+        <item>Select</item>
+        <item>AL</item>
+        <item>AR</item>
+        <item>AZ</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>DC</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+    <string-array name="relation_array">
+        <item>Select</item>
+        <item>Mother</item>
+        <item>Father</item>
+        <item>Spouse</item>
+        <item>Partner</item>
+        <item>Guardian</item>
+        <item>Sister</item>
+        <item>Brother</item>
+        <item>Friend</item>
+        <item>Extended Family</item>
+        <item>Roommate</item>
+        <item>Boyfriend</item>
+        <item>Girlfriend</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="period_array">
+        <item>Select</item>
+        <item>2015 Spring Semester</item>
+        <item>2015 Fall Semester</item>
+    </string-array>
+    <string-array name="class_array">
+        <item>Select</item>
+        <item>Freshman</item>
+        <item>Sophomore</item>
+        <item>Junior</item>
+        <item>Senior</item>
+        <item>Graduate</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="campusres_array">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Unknown</item>
+    </string-array>
     
 </resources>

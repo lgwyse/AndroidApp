@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="medhistory">Medical History</string>
+    <string name="medidbasics">Medical ID - Personal Basics</string>
+    <string name="medications">Medications</string>
+    
+    <string name="medhis1">Please add your medical conditions.</string>
+    <string name="medhis2">No conditions have been entered. Please add applicable conditions or continue.</string>
+    <string name="medhisadd">Add conditions</string>
+    
+    <string name="medid1">Organ Donor</string>
+    <string name="medid2">Blood Type</string>
+    <string name="medid3">Height - Feet</string>
+    <string name="medid4">Height - Inches</string>
+    <string name="medid5">Weight - Pounds</string>
+    <string name="medid6">Hair Color</string>
+    <string name="medid7">Eye Color</string>
+    <string name="medid8">Ethnicity</string>
+    <string name="medid9">Race</string>
+    
+    <string name="medicpls">Please add any medications you are currently taking.</string>
+    <string name="medicadd">Add a Medication</string>
+    
+</resources>

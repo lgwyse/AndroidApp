@@ -1,11 +1,13 @@
 package com.medpasshealth.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.text.Html;
 import android.text.Spanned;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -15,6 +17,13 @@ public class CreatePassword extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_password);
+
+        findViewById(R.id.contnu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CreatePassword.this.startActivity(new Intent(CreatePassword.this, ContactPersonal.class));
+            }
+        });
     }
 
 

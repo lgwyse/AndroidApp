@@ -1,9 +1,11 @@
 package com.medpasshealth.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class RecoverPassword extends Activity {
@@ -12,6 +14,13 @@ public class RecoverPassword extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recover_password);
+
+        findViewById(R.id.submitbutton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RecoverPassword.this.startActivity(new Intent(RecoverPassword.this, AccountSignIn.class));
+            }
+        });
     }
 
 

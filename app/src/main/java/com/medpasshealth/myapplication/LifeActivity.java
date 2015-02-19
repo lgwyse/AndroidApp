@@ -82,7 +82,7 @@ public class LifeActivity extends Activity {
                 if (groupPosition == 0) { //Account
                 switch (childPosition) {
                     case 0:
-                        LifeActivity.this.startActivity(new Intent(LifeActivity.this, CreatePassword.class));
+                        LifeActivity.this.startActivity(new Intent(LifeActivity.this, AccountManage.class));
                         break;
                 }}
                 if (groupPosition == 1) { //Profile
@@ -146,7 +146,7 @@ public class LifeActivity extends Activity {
 
         // Child data
         List<String> account = new ArrayList<>();
-        account.add("Create Password");
+        account.add("Manage Account");
 
         List<String> profile = new ArrayList<>();
         profile.add("Personal Contact Information");
