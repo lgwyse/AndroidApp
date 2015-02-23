@@ -33,9 +33,9 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/register_email"
             android:id="@+id/emailtext" />
-    
+
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
