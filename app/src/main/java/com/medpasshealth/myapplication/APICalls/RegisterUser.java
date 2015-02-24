@@ -66,28 +66,28 @@ public class RegisterUser extends AsyncTask<Void, Void, JSONObject> {
 
                 // convert content stream to a String
                 String resultString;
-                Log.d(TAG,"" );
+
                 resultString = this.convertStreamToString(instream);
                 instream.close();
-                resultString = resultString.substring(1,resultString.length()-1); // remove wrapping "[" and "]"
+
 
                 try{
                     result.put("response",resultString);
+                    Log.d(TAG,"Converting response to JSON SUCCESSFUL" );
                 }catch (JSONException e) {
-                    Log.d(TAG,"Converting response to JSON failed" );
+                    Log.d(TAG,"Converting response to JSON FAILED" );
                     e.printStackTrace();
                 }
-
+                int code = response.getStatusLine().getStatusCode();
                 // Raw DEBUG output of our received JSON object:
                 Log.d(TAG,"<JSONObject>\n"+result.toString()+"\n</JSONObject>");
-
-
+                Log.d(TAG,"HTTP Status Code: "+code);
             }
 
         }
         catch (Exception e) {
             e.printStackTrace();
-            Log.d(TAG,"ERROR" );
+            Log.d(TAG,"GENERIC ERROR" );
         }
         return result;
     }
@@ -111,6 +111,7 @@ public class RegisterUser extends AsyncTask<Void, Void, JSONObject> {
                 e.printStackTrace();
             }
         }
+        Log.d(TAG,"Result stream converted successfully" );
         return sb.toString();
     }
 
