@@ -37,19 +37,19 @@ public class ContactEmergency extends Activity {
                 relationtext.setError(null);
                 
                 if( firstname.getText().toString().trim().length() == 0 ) {
-                    firstname.setError("Required.");
+                    firstname.setError("Required");
                 }
                 else if( lastname.getText().toString().trim().length() == 0 ) {
-                    lastname.setError("Required.");
+                    lastname.setError("Required");
                 }
                 else if( relationship.getSelectedItemPosition()==0) {
-                    relationtext.setError("Required.");
+                    relationtext.setError("Required");
                 }
                 else if( primaryphone.getText().toString().trim().length() == 0 ) {
-                    primaryphone.setError("Required.");
+                    primaryphone.setError("Required");
                 }
                 else if( secphone.getText().toString().trim().length() == 0 ) {
-                    secphone.setError("Required.");
+                    secphone.setError("Required");
                 }
                 else ContactEmergency.this.startActivity(new Intent(ContactEmergency.this, EnteringSemester.class));
             }

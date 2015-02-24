@@ -48,13 +48,13 @@ public class EnteringSemester extends Activity {
                 campusrestext.setError(null);
                 
                 if( spinner1.getSelectedItemPosition()==0) {
-                    periodtext.setError("Required.");
+                    periodtext.setError("Required");
                 }
                 else if( spinner2.getSelectedItemPosition()==0) {
-                    classtext.setError("Required.");
+                    classtext.setError("Required");
                 }
                 else if( spinner3.getSelectedItemPosition()==0) {
-                    campusrestext.setError("Required.");
+                    campusrestext.setError("Required");
                 } 
                 else EnteringSemester.this.startActivity(new Intent(EnteringSemester.this, LifeActivity.class));
             }

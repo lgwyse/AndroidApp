@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.ExpandableListView;
 import android.widget.PopupMenu;
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class LifeActivity extends Activity {
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     int lastExpandedPosition = -1;
+    Animation animfadein;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +40,6 @@ public class LifeActivity extends Activity {
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v,
                                         int groupPosition, long id) {
-                // Toast.makeText(getApplicationContext(),
-                // "Group Clicked " + listDataHeader.get(groupPosition),
-                // Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
@@ -55,6 +54,8 @@ public class LifeActivity extends Activity {
                     expListView.collapseGroup(lastExpandedPosition);
                 }
                 lastExpandedPosition = groupPosition;
+                /*expListView.startAnimation(animfadein);*/
+                
             }
         });
 

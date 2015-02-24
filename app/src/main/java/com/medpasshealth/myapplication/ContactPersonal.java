@@ -59,37 +59,37 @@ public class ContactPersonal extends Activity {
                 statetext.setError(null);
                 
                 if( firstname.getText().toString().trim().length() == 0 ) {
-                    firstname.setError("Required.");
+                    firstname.setError("Required");
                 }
                 else if( lastname.getText().toString().trim().length() == 0 ) {
-                    lastname.setError("Required.");
+                    lastname.setError("Required");
                 }
                 else if( dateofbirth.getText().toString().trim().length() == 0 ) {
-                    dateofbirth.setError("Required.");
+                    dateofbirth.setError("Required");
                 }
                 else if(gender.getSelectedItemPosition()==0) {
-                    gendertext.setError("Required.");
+                    gendertext.setError("Required");
                 }
                 else if( uscitizen.getSelectedItemPosition()==0) {
-                    uscitizentext.setError("Required.");
+                    uscitizentext.setError("Required");
                 }
                 else if( address.getText().toString().trim().length() == 0 ) {
-                    address.setError("Required.");
+                    address.setError("Required");
                 }
                 else if( city.getText().toString().trim().length() == 0 ) {
-                    city.setError("Required.");
+                    city.setError("Required");
                 }
                 else if( state.getSelectedItemPosition()==0) {
-                    statetext.setError("Required.");
+                    statetext.setError("Required");
                 }
                 else if( zip.getText().toString().trim().length() == 0 ) {
-                    zip.setError("Required.");
+                    zip.setError("Required");
                 }
                 else if( prefphone.getText().toString().trim().length() == 0 ) {
-                    prefphone.setError("Required.");
+                    prefphone.setError("Required");
                 }
                 else if( backupemail.getText().toString().trim().length() == 0 ) {
-                    backupemail.setError("Required.");
+                    backupemail.setError("Required");
                 }
                 else ContactPersonal.this.startActivity(new Intent(ContactPersonal.this, ContactEmergency.class));
             }

@@ -8,31 +8,51 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
+        android:background="@drawable/life_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:weightSum="1"
         tools:context="com.medpasshealth.myapplication.LifeActivity">
-    
-        <ImageButton
-            android:layout_width="65dp"
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/medpass_logo_small"
-            android:onClick="showPopup"
-            android:id="@+id/medmenu"
-            android:background="@android:color/transparent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="15dp"
-            android:contentDescription="Options" />
-    
+            android:paddingBottom="25dp"
+            android:paddingTop="10dp">
+
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/medpass_logo_small"
+                android:id="@+id/medpasslogo"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_settings"
+                android:onClick="showPopup"
+                android:id="@+id/medmenu"
+                android:background="@android:color/transparent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
         <ExpandableListView
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/navexp"
             android:fastScrollEnabled="false"
             android:choiceMode="singleChoice"
-            android:listSelector="@color/medpassblue" />
+            android:listSelector="@android:color/holo_blue_light"
+            android:layout_weight="0.65"
+            android:divider="@color/medpassblue"
+            android:dividerHeight="0.3dp"
+            android:childDivider="@color/medpassblue" />
 
     </LinearLayout>
 </ScrollView>

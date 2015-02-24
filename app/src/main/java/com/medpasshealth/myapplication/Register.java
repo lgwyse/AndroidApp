@@ -47,32 +47,28 @@ public class Register extends Activity {
             @Override
             public void onClick(View v) {
 
-                //if ((((Switch) findViewById(R.id.agreementswitch)).isChecked())&& (findViewById(R.id.newpassword)== findViewById(R.id.confirmpassword))) {
-                //Register.this.startActivity(new Intent(Register.this, CreatePassword.class));
 
                 Log.d(TAG, "Register On click event");
 
                 if (username.getText().toString().trim().length() == 0) {
-                    username.setError("An email address is required.");
+                    username.setError("Email address is required");
                 } else if (newpassword.getText().toString().trim().length() == 0) {
-                    newpassword.setError("A password is required.");
+                    newpassword.setError("Password is required");
                 } else if (confirmnewpass.getText().toString().trim().length() == 0) {
-                    confirmnewpass.setError("Please confirm your password.");
+                    confirmnewpass.setError("Confirm your password");
                 } else if (!newpassword.getText().toString().equals(confirmnewpass.getText().toString())) {
-                    confirmnewpass.setError("Password fields must match.");
+                    confirmnewpass.setError("Password fields must match");
                 } else if (!agreementswitch.isChecked()) {
-                    agreementswitch.setError("Must accept agreement to register.");
+                    agreementswitch.setError("Must accept agreement to register");
                 } else{
-                    Register.this.startActivity(new Intent(Register.this, ContactPersonal.class));
                     JSONObject user = new JSONObject();
-
                     try {
                         user.put("email", username.getText());
                         user.put("password", newpassword.getText());
                         Log.d(TAG, "Converting user info to JSON successful");
                         RegisterUser call = new RegisterUser(user);
-
                         call.execute();
+                        Register.this.startActivity(new Intent(Register.this, ContactPersonal.class));
 
                     } catch (JSONException e) {
                         Log.d(TAG, "Converting user info to JSON failed");
