@@ -28,6 +28,7 @@ public class RegisterUser extends AsyncTask<Void, Void, JSONObject> {
     private JSONObject user;
     private JSONObject result = new JSONObject();
 
+    public static int Erroor;
     private static final String TAG = "Register Post";
 
     public RegisterUser (JSONObject user)
@@ -82,8 +83,9 @@ public class RegisterUser extends AsyncTask<Void, Void, JSONObject> {
                 // Raw DEBUG output of our received JSON object:
                 Log.d(TAG,"<JSONObject>\n"+result.toString()+"\n</JSONObject>");
                 Log.d(TAG,"HTTP Status Code: "+code);
+                Erroor = code;
             }
-
+ 
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -91,7 +93,7 @@ public class RegisterUser extends AsyncTask<Void, Void, JSONObject> {
         }
         return result;
     }
-
+    
     private static String convertStreamToString(InputStream is) {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));

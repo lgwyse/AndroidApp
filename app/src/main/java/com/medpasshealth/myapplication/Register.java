@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Switch;
 
 import android.util.Log;
-
+import android.widget.Toast;
 
 
 import org.json.JSONException;
@@ -68,8 +68,16 @@ public class Register extends Activity {
                         Log.d(TAG, "Converting user info to JSON successful");
                         RegisterUser call = new RegisterUser(user);
                         call.execute();
-                        Register.this.startActivity(new Intent(Register.this, ContactPersonal.class));
-
+                        try {
+                            int errornum = call.Erroor;
+                            Toast toast = Toast.makeText(getApplicationContext(), "Error " + errornum, Toast.LENGTH_LONG);
+                            toast.show();
+                        /*Register.this.startActivity(new Intent(Register.this, ContactPersonal.class));*/
+                        }
+                        catch (Exception e) {
+                            call.Erroor = 11111;
+                        }
+                        
                     } catch (JSONException e) {
                         Log.d(TAG, "Converting user info to JSON failed");
                         e.printStackTrace();
